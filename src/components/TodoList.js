@@ -4,7 +4,8 @@ import { useLocalStorage } from "../hooks/useLocalStorage";
 function TodoList(props) {
   const [todos, setTodos] = useLocalStorage("todos", [
     "Take out the trash",
-    "Walk the dog"
+    "Walk the dog",
+    "Laundry",
   ]);
 
   const handleChange = (e, i) => {
@@ -23,7 +24,7 @@ function TodoList(props) {
             <input
               type="text"
               value={todo}
-              onChange={e => handleChange(e, i)}
+              onChange={(e) => handleChange(e, i)}
             />
           </li>
         ))}

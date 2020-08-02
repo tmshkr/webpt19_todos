@@ -6,9 +6,9 @@ export const useLocalStorage = (key, initialValue) => {
     return item ? JSON.parse(item) : initialValue;
   });
 
-  useEffect(() => {
-    window.localStorage.setItem(key, JSON.stringify(value));
-  }, [key, value]);
+  // useEffect(() => {
+  //   window.localStorage.setItem(key, JSON.stringify(value));
+  // }, [key, value]);
 
   return [value, setValue];
 };
